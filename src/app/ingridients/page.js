@@ -102,7 +102,7 @@ const Ingridients = () => {
           ) : (
             <div className="text-center py-16">
               <p className="text-orange-500 text-lg">
-                No ingredients found matching "{input}"
+                No ingredients found matching &quot;{input}&quot;
               </p>
             </div>
           )}

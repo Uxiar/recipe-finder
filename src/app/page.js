@@ -33,7 +33,7 @@ const Home = () => {
       <div className="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 gap-12">
         <div className="text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-orange-500 mb-2 animate-pulse">
-            Recipe Finder!!
+            Recipe Finder
           </h1>
           <p className="text-white text-lg md:text-xl opacity-80">
             Discover delicious recipes from around the world
