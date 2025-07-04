@@ -30,7 +30,7 @@ const Ingridients = () => {
 
   if (ingridients.length === 0) {
     return (
-      <div className="h-screen flex items-center justify-center">
+      <div className="h-screen flex items-center justify-center bg-amber-50">
         <Image src={loader} alt="loader" height={100} width={100} />
       </div>
     );
@@ -57,10 +57,10 @@ const Ingridients = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-orange-600 mb-4">
-            Explore Culinary Regions
+            Explore All Ingredients{" "}
           </h1>
           <p className="text-orange-400 max-w-2xl mx-auto">
-            Discover authentic cuisines from around the world
+            Discover recipes by ingridients from around the world
           </p>
         </div>
         <div className="flex items-center justify-center mb-12">

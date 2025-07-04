@@ -28,7 +28,6 @@ const SingleMeal = () => {
       });
   }, [params.mealRecipe]); // Fixed dependency to params.mealRecipe
 
-  // Only extract ingredients/measures when recipeData exists and has items
   const ingredients = [];
   const measures = [];
 
