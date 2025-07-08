@@ -26,7 +26,7 @@ const SingleMeal = () => {
         setRecipeData(null);
         setLoading(false);
       });
-  }, [params.mealRecipe]); 
+  }, [params.mealRecipe]);
 
   const ingredients = [];
   const measures = [];
@@ -69,14 +69,14 @@ const SingleMeal = () => {
           loop
           muted
           playsInline
-          className="w-full   object-cover opacity-50"
+          className="w-full  h-full object-cover opacity-50"
         >
           <source src="/home.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
       </div>
-      <div className="z-10 relative">
+      <div className="z-10 relative px-4 sm:px-4">
         {recipeData.map((item) => (
           <article key={item.idMeal} className="space-y-6">
             <header className="mb-6">

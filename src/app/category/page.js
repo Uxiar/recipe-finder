@@ -66,16 +66,16 @@ const Category = () => {
             loop
             muted
             playsInline
-            className="w-full   object-cover opacity-50"
+            className="w-full h-full   object-cover opacity-50"
           >
             <source src="/home.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
         </div>
-        <div className="relative z-1000">
+        <div className="mt-10  sm:mt-0 lg:mt-0 md:mt-0 relative z-1000">
           <div className=" relative flex flex-col items-center justify-center mb-10">
-            <h1 className="text-4xl md:text-5xl font-bold text-orange-600 mb-4">
+            <h1 className=" sm:text-4xl text-2xl font-bold text-orange-600 mb-1 sm:mb-4 text-center">
               Discover All Categories
             </h1>
             <p className="text-orange-400 max-w-2xl mx-auto">
@@ -90,13 +90,13 @@ const Category = () => {
                 value={input}
                 onChange={(e) => CategoryInputHandler(e.target.value)}
                 type="text"
-                className="w-full py-3 pr-20 outline-none  text-white placeholder-orange-300"
-                placeholder="search category (eg.chicken,beef) "
+                className="w-full py-2 sm:py-3 sm:pr-20  pr-12 outline-none   text-white placeholder-orange-300"
+                placeholder="search category (eg.chicken)"
               />
             </div>
           </div>
           {filterCategories.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="px-4 sm:px-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
               {filterCategories?.map((item) => {
                 return (
                   <Link

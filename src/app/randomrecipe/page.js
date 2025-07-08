@@ -56,20 +56,20 @@ const RandomRecipe = () => {
 
   return (
     <main className="relative mx-auto p-4 md:p-8 bg-black min-h-screen">
-      <div className="fixed inset-0 overflow-hidden z-0">
+      <div className="fixed top-0 bottom-0 overflow-hidden z-0 ">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-full object-cover opacity-50"
+          className="w-full h-full object-cover opacity-50"
         >
           <source src="/home.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70" />
       </div>
 
-      <div className="relative z-10 space-y-6">
+      <div className="px-4 sm:px-0 relative z-10 space-y-6">
         <header>
           <h1 className="text-3xl font-bold text-white">
             {data.strMeal}{" "}

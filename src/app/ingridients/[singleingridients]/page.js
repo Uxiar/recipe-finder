@@ -78,7 +78,7 @@ const SingleIngridients = () => {
           loop
           muted
           playsInline
-          className="w-full   object-cover opacity-50"
+          className="w-full h-full  object-cover opacity-50"
         >
           <source src="/home.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -106,7 +106,7 @@ const SingleIngridients = () => {
           {`All Recipes with ${params.singleingridients}`}
         </h2>
         {filteredMeals.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          <div className="p-4 sm:p-0 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {filteredMeals?.map((item) => (
               <div
                 onClick={() => handleSecoundApi(item)}

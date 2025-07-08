@@ -51,14 +51,14 @@ const Regions = () => {
           loop
           muted
           playsInline
-          className="w-full  object-cover opacity-50"
+          className="w-full h-full object-cover opacity-50"
         >
           <source src="/home.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
       </div>
-      <div className="z-1000 relative max-w-6xl mx-auto">
+      <div className=" pt-4 sm:pt-0 z-1000 relative max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-orange-600 mb-4">
             Explore Culinary Regions
@@ -75,8 +75,8 @@ const Regions = () => {
               value={input}
               onChange={AllRegionInputHandler}
               type="text"
-              className=" py-4  outline-none  text-white placeholder-white"
-              placeholder="search category"
+              className=" py-4  outline-none  text-white placeholder-orange-400"
+              placeholder="search Region"
             />
           </div>
         </div>
@@ -86,7 +86,7 @@ const Regions = () => {
             All Regions
           </h2>
           {filterRegions.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <div className="p-4 sm:p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
               {filterRegions?.map((item, index) => (
                 <Link
                   href={`/regions/${item?.strArea}`}

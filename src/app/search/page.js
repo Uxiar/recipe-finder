@@ -83,19 +83,19 @@ const Search = () => {
           loop
           muted
           playsInline
-          className="w-full   object-cover opacity-50"
+          className="w-full h-full  object-cover opacity-50"
         >
           <source src="/home.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
       </div>
-      <div className="relative max-w-6xl mx-auto z-100">
+      <div className=" pt-10 sm:p-0 relative max-w-6xl mx-auto z-100">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-orange-600 mb-4">
+          <h1 className="text-3xl sm:4xl md:text-5xl font-bold text-orange-600 mb-4">
             Discover Regional Recipes
           </h1>
-          <p className="text-orange-400 max-w-2xl mx-auto">
+          <p className="text-orange-400 text-sm sm:2xl mx-auto">
             Explore authentic dishes from around the world
           </p>
         </div>

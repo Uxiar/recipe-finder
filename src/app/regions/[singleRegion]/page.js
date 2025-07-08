@@ -78,7 +78,7 @@ const SingleRegion = () => {
           loop
           muted
           playsInline
-          className="w-full  object-cover opacity-50"
+          className="w-full h-full  object-cover opacity-50"
         >
           <source src="/home.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -105,7 +105,7 @@ const SingleRegion = () => {
         <h2 className="text-xl font-semibold text-orange-500 text-center mb-6">
           {`All ${params.singleRegion} Recipes`}
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="px-4 sm:px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {filteredMeals?.map((item) => (
             <div
               onClick={() => HandleSecoundApi(item)}

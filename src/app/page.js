@@ -22,24 +22,24 @@ const Home = () => {
           loop
           muted
           playsInline
-          className="w-full   object-cover opacity-50"
+          className="w-full  h-full object-cover opacity-50"
         >
           <source src="/home.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
       </div>
-      <div className="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 gap-12">
+      <div className="p-10  relative z-10 min-h-screen flex flex-col justify-center items-center gap-12">
         <div className="text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-orange-500 mb-2 animate-pulse">
+          <h1 className="text-4xl sm:5xl md:text-6xl font-bold text-orange-500 mb-2   animate-pulse">
             Recipe Finder
           </h1>
-          <p className="text-white text-lg md:text-xl opacity-80">
+          <p className="text-white text-xs sm:text-lg md:text-xl opacity-80">
             Discover delicious recipes from around the world
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl">
+        <div className="grid grid-cols-1 mb-8  sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-4xl">
           {menuItems.map((item, index) => (
             <Link key={index} href={item.href} passHref>
               <div
@@ -51,7 +51,7 @@ const Home = () => {
           ))}
         </div>
 
-        <div className="absolute bottom-6 text-white/60 text-sm">
+        <div className="absolute bottom-5 text-white/60 text-sm">
           Find your next culinary adventure
         </div>
       </div>

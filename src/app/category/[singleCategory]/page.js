@@ -55,15 +55,15 @@ const SingleCategory = () => {
           loop
           muted
           playsInline
-          className="w-full object-cover opacity-50"
+          className="w-full h-full object-cover opacity-50"
         >
           <source src="/home.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
       </div>
 
-      <div className="relative z-10">
-        <h1 className="text-2xl md:text-3xl font-bold text-orange-500 mb-4 text-center">
+      <div className="relative z-10 p-4 sm:p-0">
+        <h1 className="text-2xl md:text-3xl font-bold text-orange-500 mb-10 sm:mb-4 text-center">
           Category : {params.singleCategory}
         </h1>
 
@@ -74,7 +74,7 @@ const SingleCategory = () => {
               value={input}
               onChange={(e) => handleInputChange(e.target.value)}
               type="text"
-              className="bg-transparent py-2 outline-none text-white placeholder-white"
+              className="bg-transparent py-2 outline-none text-white placeholder-orange-400"
               placeholder={`Search ${params.singleCategory} Recipe`}
             />
           </div>
@@ -115,7 +115,7 @@ const SingleCategory = () => {
           </div>
         ) : (
           <div className="text-center py-16">
-            <p className="text-orange-500 text-lg">No category found!!</p>
+            <p className="text-orange-500 text-lg">No Recipe found!!</p>
           </div>
         )}
       </div>

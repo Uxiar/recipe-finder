@@ -60,7 +60,7 @@ const Ingridients = () => {
           loop
           muted
           playsInline
-          className="w-full   object-cover opacity-50"
+          className="w-full h-full object-cover opacity-50"
         >
           <source src="/home.mp4" type="video/mp4" />
           Your browser does not support the video tag.
@@ -69,7 +69,7 @@ const Ingridients = () => {
       </div>
       <div className=" relative max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-orange-600 mb-4">
+          <h1 className="text-3xl pt-4 sm:p-0 md:text-5xl font-bold text-orange-600 mb-4">
             Explore All Ingredients{" "}
           </h1>
           <p className="text-orange-400 max-w-2xl mx-auto">
@@ -95,7 +95,7 @@ const Ingridients = () => {
             All Regions
           </h2>
           {filterData.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <div className="p-4 sm:p-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
               {filterData?.map((item, index) => (
                 <Link
                   href={`/ingridients/${item?.strIngredient}`}
