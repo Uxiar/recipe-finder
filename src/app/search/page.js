@@ -76,8 +76,21 @@ const Search = () => {
   };
 
   return (
-    <div className="p-6 md:p-10 bg-white min-h-screen">
-      <div className="max-w-6xl mx-auto">
+    <div className="relative p-6 md:p-10 bg-black min-h-screen">
+      <div className="fixed inset-0 overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full   object-cover opacity-50"
+        >
+          <source src="/home.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+      </div>
+      <div className="relative max-w-6xl mx-auto z-100">
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-orange-600 mb-4">
             Discover Regional Recipes
@@ -87,7 +100,6 @@ const Search = () => {
           </p>
         </div>
 
-        {/* Search Bar */}
         <div className="flex justify-center mb-12">
           <div className="relative w-full max-w-2xl">
             <div className="absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none">
@@ -111,7 +123,7 @@ const Search = () => {
         </div>
 
         <div className="mb-16">
-          <h2 className="text-xl font-semibold text-orange-700 mb-4 text-center">
+          <h2 className="text-xl font-semibold text-orange-500 mb-4 text-center">
             Popular Cuisines
           </h2>
           <div className="flex flex-wrap justify-center gap-3">
@@ -122,7 +134,7 @@ const Search = () => {
                 className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 transform hover:scale-105 ${
                   isActive && Button === country
                     ? "bg-gradient-to-br from-orange-500 to-orange-600 text-white shadow-lg"
-                    : "bg-orange-50 text-orange-700 hover:bg-orange-100 shadow"
+                    : "bg-orange-500 text-white hover:bg-orange-700 shadow"
                 }`}
               >
                 {country}
@@ -131,9 +143,8 @@ const Search = () => {
           </div>
         </div>
 
-        {/* Recipes Section */}
         <div>
-          <h2 className="text-3xl font-bold text-orange-700 mb-8 text-center">
+          <h2 className="text-3xl font-bold text-orange-500 mb-8 text-center">
             {Button} Recipes
           </h2>
 
@@ -143,11 +154,11 @@ const Search = () => {
                 <div
                   key={item?.idMeal}
                   onClick={() => HandleSecoundApi(item)}
-                  className="group cursor-pointer flex flex-col items-center bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-orange-100 transition-all duration-500"
+                  className="border border-white group cursor-pointer flex flex-col items-center backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-md hover:shadow-white transition-all duration-500"
                 >
-                  <div className="relative w-full h-60 overflow-hidden">
+                  <div className="relative w-full h-60 overflow-hidden ">
                     <Image
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500 p-3 rounded-3xl"
                       src={item?.strMealThumb}
                       alt={item?.strMeal}
                       fill
@@ -156,10 +167,10 @@ const Search = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   <div className="p-5 w-full text-center">
-                    <h3 className="text-xl font-semibold text-orange-800 group-hover:text-orange-600 transition-colors duration-300">
+                    <h3 className="text-xl font-semibold text-orange-500 group-hover:text-white transition-colors duration-300">
                       {item?.strMeal}
                     </h3>
-                    <button className="mt-3 px-4 py-1.5 bg-orange-100 text-orange-600 rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button className="mt-3 px-4 py-1.5 bg-orange-500 text-white rounded-full text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       View Recipe
                     </button>
                   </div>

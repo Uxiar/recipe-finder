@@ -16,20 +16,19 @@ const Home = () => {
 
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
-      <div className="absolute inset-0">
+      <div className="fixed inset-0 overflow-hidden">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-50"
+          className="w-full   object-cover opacity-50"
         >
           <source src="/home.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
       </div>
-
       <div className="relative z-10 min-h-screen flex flex-col justify-center items-center px-4 gap-12">
         <div className="text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-orange-500 mb-2 animate-pulse">
@@ -47,7 +46,6 @@ const Home = () => {
                 className={`${item.color} border-2 border-white/30 p-6 rounded-2xl shadow-lg text-center transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:bg-white/10 hover:border-orange-500 cursor-pointer backdrop-blur-sm`}
               >
                 <span className="text-lg font-semibold">{item.title}</span>
-                <div className="mt-2 h-1 w-8 bg-orange-500 mx-auto transition-all duration-300 group-hover:w-16"></div>
               </div>
             </Link>
           ))}
